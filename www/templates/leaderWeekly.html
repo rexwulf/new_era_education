@@ -1,0 +1,40 @@
+<ion-view view-title="LeaderBoard">
+
+    <ion-content  class="sub_topics grey">
+
+       <div class=" no-padding myfont" >
+        <div class="row " ng-repeat="weekRank in weekRanks track by $index">
+           <item class="leaderBoardRanks lgrey" id="box_shadow">{{$index+1}}</item>
+          <a class="item item-positive leaderBoardName" id="box_shadow">
+          <b>{{weekRank}}</b>
+         </a>
+       </div>
+
+  <div class="row">
+    <div class="col-20"></div>
+      <a id="box_shadow_update" class="item item-balanced item-text-wrap myfont col-60 showMoreBtn" ng-click="loadWeek()">
+      SHOW MORE
+      </a>
+    <div class="col-20"></div>
+  </div>
+  <div class="empty">
+  </div>
+      </div>
+
+
+    </ion-content>
+  <div class="tabs-striped tabs-background-assertive tabs-color-light ">
+   <div class="tabs ">
+    <a class="tab-item myfont" href="#/app/leaderToday">
+      Today's
+    </a>
+    <a class="tab-item active myfont" href="#">
+      Weekly
+    </a>
+    <a class="tab-item myfont" href="#/app/leaderMonthly">
+      Monthly
+    </a>
+   </div>
+  </div>
+
+  </ion-view>

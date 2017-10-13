@@ -1,0 +1,30 @@
+<ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Permanent Settings</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="John" ng-model="firstname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="Suhr" ng-model="lastname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Admission Number</span>
+          <input type="text" placeholder="Admission Number" ng-model="admnNo">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Batch</span>
+          <input type="text" placeholder="Batch" ng-model="batch">
+        </label>
+      </div>
+      <div class="button-bar" style="width: 90vw; margin-left: 5vw;">
+        <a ng-click="save(firstname, lastname, admnNo, batch)" class="button button-positive">Save</a>
+        <a ng-click="closeModal()" class="button button-positive">Exit</a>
+        <a on-hold="reset()" class="button button-assertive">Reset</a>
+      </div>
+    </ion-content>
+</ion-modal-view>

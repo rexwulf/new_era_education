@@ -1,0 +1,77 @@
+<!--<ion-view view-title="testEnd">
+  <ion-content>
+    total = {{marks}} <br>
+    maths = {{subjectMarks[0]}}<br>
+    phy = {{subjectMarks[1]}}<br>
+    chem = {{subjectMarks[2]}}<br>
+    <div ng-repeat="b in q">
+      <div ng-repeat="a in b[$index]">
+        {{a.userAns || json}}
+        {{a.answer || json}}
+      </div>
+      <br>
+    </div>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Question">
+    <ion-content  class="grey myfont">
+
+
+<div class="list">
+  <div class="list animated rubberBand">
+     <li class="row ">
+       <div class="col col-20"></div>
+       <div class="col col-60">
+         <button id="box_shadow" class="item item-assertive item-text-wrap">
+          Total Marks -> <strong>{{marks}}</strong>
+         </button>
+      </div>
+      <div class="col col-20"></div>
+    </li>
+  </div>
+
+
+ <div class="list animated zoomInUp">
+     <li class="row ">
+       <div class="col col-20"></div>
+       <div class="col col-60">
+         <button id="box_shadow" class="item item-balanced item-text-wrap">
+            Total correct -> <strong>{{totalCorrect}}</strong>
+          </button>
+       </div>
+     <div class="col col-20"></div>
+    </li>
+</div>
+
+
+ <div class="list animated rubberBand">
+   <li class="row ">
+     <div class="col col-20"></div>
+     <div class="col col-60">
+       <button id="box_shadow" class="item item-positive item-text-wrap">
+        Accuracy -> <strong>{{accuracy}}%</strong>
+    </div>
+    <div class="col col-20"></div>
+  </li>
+ </div>
+
+ <div class="list animated infinite swing">
+  <li class="row ">
+    <div class="col col-20"></div>
+    <div class="col col-60">
+      <button id="box_shadow" class="item item-energized item-text-wrap">
+       KEEP WORKING HARD !
+     </button>
+
+
+
+
+      </button>
+   </div>
+   <div class="col col-20"></div>
+  </li>
+ </div>
+</div>
+
+ </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-modal-view>
+    <ion-content class="grey" >
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-90">
+        <button id="practice-bar-button-lvl" class="myfont">
+          Lvl
+          <i class="icon ion-arrow-up-b"></i>
+          <b>{{currLevel}}</b>
+        </button>
+        <button id="practice-bar-button-xp" class="myfont" >
+          <i class="icon ion-flash"></i>
+          <strong>{{currPoints}}</strong>
+        </button>
+      </div>
+      <div class="col"></div>
+    </div>
+        <div class="item card-item">
+            <div  id="box_shadow" class="card stable-bg ink ink-dark">
+                <div class="item item-text-wrap">
+                    <!--<span><strong>1.</strong></span>-->
+                    <strong id="jax">{{card.question}}</strong>
+                    <a ng-hide="!currQImg" class="image" ng-click="card.open()"><img ng-src="{{currQImg}}">
+                    </a>
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i>{{card.timing}}
+                        </div>
+                    </div>
+                  </div>
+                  <ion-list>
+                    <div class="item-text-wrap">
+                      <ion-radio ng-model="card.currAns" ng-value="'A'"><b>1.</b>{{card.a}}<img ng-hide="!currAImg" ng-src="{{currAImg}}"></ion-radio>
+                      <ion-radio ng-model="card.currAns" ng-value="'B'"><b>2.</b>{{card.b}}<img ng-hide="!currBImg" ng-src="{{currBImg}}"></ion-radio>
+                      <ion-radio ng-model="card.currAns" ng-value="'C'"><b>3.</b>{{card.c}}<img ng-hide="!currCImg" ng-src="{{currCImg}}"></ion-radio>
+                      <ion-radio ng-model="card.currAns" ng-value="'D'"><b>4.</b>{{card.d}}<img ng-hide="!currDImg" ng-src="{{currDImg}}"></ion-radio>
+                    </div>
+                  </ion-list>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+        <a class="item item-dark myfont col-40"   ng-click="end(card.currAns)" style="text-align:center;"><b>End Game</b></a>
+        <div class="col"></div>
+      </div>
+    </ion-content>
+</ion-modal-view>

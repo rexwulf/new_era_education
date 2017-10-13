@@ -1,0 +1,42 @@
+<!--<ion-view view-title="test">
+  <ion-content>
+    <div ng-repeat="qArr in questions">
+      <h3>{{subjects[$index]}}</h3>
+      <button ng-href="#/app/testlist/{{password}}/{{q.subject}}/{{q.num}}" ng-click="openQuestion(q.subject, q.num)"
+        class="button button-outline"
+        ng-class="{'button-balanced': q.answered, 'button-energized': q.review, 'button-assertive': !q.userAns, 'button-dark': q.review && q.answered}"
+        ng-repeat="q in qArr track by $index">
+        {{q.num}}
+      </button>
+    </div>
+    {{timeLeft}}
+  </ion-content>
+</ion-view>-->
+<ion-view title="Test2">
+	<ion-content class="grey">
+
+<!--////////////////////////grey checkbox -> not attempted
+                            yellow checkbox -> marked or bookmarked (note that both have to be same)
+                            green checkbox -> attempted/////////////////////////////////////
+    Feature: make onclick of checkbox to be linked to the instant of the question;                      -->
+  <div ng-repeat="qArr in questions">
+   <div class="row">
+      <div class="col"></div>
+      <div class="button button-full button-positive col-90" id="box_shadow">
+       {{subjects[$index]}}
+      </div>
+      <div class="col"></div>
+    </div>
+
+  <div class="container" >
+    <a ng-href="#/app/testlist/{{password}}/{{q.subject}}/{{q.num}}"
+       ng-click="openQuestion(q.subject, q.num)" class="ques_check"
+       ng-repeat="q in qArr track by $index"
+       ng-class="{'button-positive': q.answered, 'button-energized': q.review, 'button-dark': !q.userAns, 'button-balanced': q.review && q.answered}">
+      <ion-checkbox ng-checked="true" class="checkbox-energized po" >{{q.num}}</ion-checkbox>
+    </a>
+  </div>
+ </div>
+<!--PHYSICS PART ENDS-->
+  </ion-content>
+</ion-view>

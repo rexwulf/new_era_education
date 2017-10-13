@@ -1,0 +1,10 @@
+{
+  "name": "vgpt",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/qApi",
+      "proxyUrl": "http://192.168.1.107:8080/Laravel/VGPT/public/api/v1/question/view"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<!--<ion-view view-title="dpp topics list">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="topic in topics" href="#/app/dpp/{{subject}}/{{dppLink[$index]}}">{{topic}}</ion-item>
+    </ion-list>
+    <button ng-click="addDpp()" class="button">add dpp</button>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Choose Topic" >
+    <ion-content  class="sub_topics grey">
+       <div class=" no-padding" >
+         <div class="row" ng-repeat="topic in topics" >
+           <item class="sub_topics_no lgrey">{{$index+1}}</item>
+            <a class="item item-text-wrap item-positive sub_topics_item" style="font-size:1em;" href="#/app/dpp/{{subject}}/{{topic}}">
+           {{topicNames[$index]}}
+         </a>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>

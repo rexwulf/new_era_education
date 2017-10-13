@@ -1,0 +1,25 @@
+<!--<ion-view view-title="Select Your Topic">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-href="#/app/qa/game/{{subject}}/{{topic}}" ng-repeat="topic in topics">  link to game
+        {{topic}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>-->
+
+
+<ion-view view-title="Select Topic" >
+
+    <ion-content  class="sub_topics grey">
+
+       <div class=" no-padding" >
+         <div class="row" ng-repeat="topic in topics track by $index">
+           <item class="sub_topics_no lgrey">{{$index+1}}</item>
+           <a class="item item-text-wrap item-positive sub_topics_item" style="font-size:1em;" ng-href="#/app/qa/game/{{subject}}/{{topic}}">
+             {{topicNames[$index]}}
+           </a>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>

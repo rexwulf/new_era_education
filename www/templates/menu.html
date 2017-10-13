@@ -1,0 +1,65 @@
+<ion-side-menus enable-menu-with-back-views="true" class="grey2">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive-900" ng-class="{ 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+            <ion-nav-buttons side="right">
+              <div id="header_icons" class="buttons">
+                  <a class="header-icons" href="#/app/profile" >
+                    <i class="ion-ios-home-outline" style="font-size:1.7em" ></i>
+                  </a>
+                  <a class="header-icons" href="#/app/practice1" >
+                    <i class="ion-ios-timer-outline" style="font-size:1.7em;" ></i>
+                  </a>
+                  <a class="header-icons" href="#/app/bookmarks" >
+                    <i class="ion-ios-book-outline" style="font-size:1.7em;" ></i>
+                  </a>
+                  <a class="header-icons" href="#/app/settings" >
+                    <i class="ion-ios-gear-outline" style="font-size:1.7em;" ></i>
+                  </a>
+               </div>
+
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+
+
+        <ion-nav-view name="menuContent" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="right">
+
+        <ion-content >
+            <ion-list>
+                    <a class="empty"></a>
+                    <a menu-close class="item item-icon-left" href="#/app/update">
+                    <i class="icon ion-android-notifications-none" ></i>
+                       Update
+                    </a>
+
+                    <a menu-close class="item item-icon-left" href="#/app/videos">
+                    <i class="icon ion-monitor"></i>
+                         Tutorials
+                    </a>
+
+                   <a menu-close class="item item-icon-left" href="#/app/qa">
+                   <i class="icon ion-ios-game-controller-b" ></i>
+                         Practice
+                   </a>
+
+                   <a menu-close class="item item-icon-left" href="#/app/testlist">
+                   <i class="icon ion-android-create" ></i>
+                         Tests
+                   </a>
+
+                   <a menu-close class="item item-icon-left" href="#/app/dpp">
+                   <i class="icon ion-android-document" ></i>
+                         DPPs
+                   </a>
+
+                   <a menu-close class="item item-icon-left" href="#/app/about">
+                   <i class="icon ion-code" ></i>
+                         About
+                   </a>
+
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

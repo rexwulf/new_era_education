@@ -1,0 +1,113 @@
+<!--<ion-view view-title="test">
+  <ion-content>
+    <div class="list card">
+      <div class="item item-body">
+        <p>
+          {{question.question}}
+        </p>
+      </div>
+    </div>
+    <ion-list ng-if="question.type == 'single'">
+      <ion-radio ng-model="question.userAns" ng-value="'a'">{{question.A}}</ion-radio>
+      <ion-radio ng-model="question.userAns" ng-value="'b'">{{question.B}}</ion-radio>
+      <ion-radio ng-model="question.userAns" ng-value="'c'">{{question.C}}</ion-radio>
+      <ion-radio ng-model="question.userAns" ng-value="'d'">{{question.D}}</ion-radio>
+    </ion-list>
+    <ion-list ng-if="question.type == 'multiple'">
+      <ion-checkbox ng-model="question.userAns.a">{{question.A}}</ion-checkbox>
+      <ion-checkbox ng-model="question.userAns.b">{{question.B}}</ion-checkbox>
+      <ion-checkbox ng-model="question.userAns.c">{{question.C}}</ion-checkbox>
+      <ion-checkbox ng-model="question.userAns.d">{{question.D}}</ion-checkbox>
+    </ion-list>
+    <div class="list list-inset" ng-if="question.type == 'integer'">
+      <label class="item item-input">
+        <input type="text" placeholder="Integer" ng-model="question.userAns">
+      </label>
+    </div>
+    <div class="button-bar">
+      <a ng-if="prevButton" ng-click="previous()" class="button button-positive">Prev</a>
+      <a ng-if="!question.answered" ng-click="saveQuestion(question.userAns)" class="button button-positive">Save</a>
+      <a ng-if="question.answered" ng-click="unsaveQuestion()" class="button button-positive">Unsave</a>
+      <a ng-if="nextButton" ng-click="next()" class="button button-positive">Next</a>
+      <a ng-if="!nextButton" ng-click="showConfirm()" class="button button-assertive">End and Submit</a>
+    </div>
+    <a ng-if="!question.review" class="button button-positive" ng-click="reviewLater()">Review Later</a>
+    {{timeLeft}}
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Question">
+    <ion-content class="grey">
+
+      <div class="item card-item">
+          <div  id="box_shadow" class="card stable-bg ink ink-dark">
+              <div class="item item-text-wrap">
+                <div class=" bbar button-bar myfont" margin-bottom="20px">
+                 <a ng-if="prevButton" ng-click="previous()" id="box_shadow_b" class="button button-positive">
+                   <i class="icon ion-arrow-left-b">
+                   </i>
+                 </a>
+                 <a ng-if="!question.answered" ng-click="saveQuestion(question.userAns)" id="box_shadow_b" class="button button-positive">
+                   <small>Save</small>
+                 </a>
+                 <a ng-if="question.answered" ng-click="unsaveQuestion()" id="box_shadow_b" class="button button-positive">
+                   <small>Unsave</small>
+                 </a>
+                 <a ng-if="nextButton" ng-click="next()" id="box_shadow_b" class="button button-positive">
+                   <i class="icon ion-arrow-right-b">
+                   </i>
+                 </a>
+                </div>
+                    <!--<span><strong>1.</strong></span>-->
+                    <strong id="jax"></strong>
+                    <a class="image" ng-if="currQImg" ng-click="openImage(question.qImgUrl)"><img ng-src="{{currQImg}}">
+                    </a>
+
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i>{{testTimer}}
+                        </div>
+                    </div>
+                  </div>
+                    <ion-list ng-if="question.type == 'multiple'">
+                       <div class="item-text-wrap">
+                        <ion-checkbox ng-model="question.userAns.a"><b>1.</b>{{question.A}}<img ng-hide="!currAImg" ng-src="{{currAImg}}"></ion-checkbox>
+                        <ion-checkbox ng-model="question.userAns.b"><b>2.</b>{{question.B}}<img ng-hide="!currBImg" ng-src="{{currBImg}}"></ion-checkbox>
+                        <ion-checkbox ng-model="question.userAns.c"><b>3.</b>{{question.C}}<img ng-hide="!currCImg" ng-src="{{currCImg}}"></ion-checkbox>
+                        <ion-checkbox ng-model="question.userAns.d"><b>4.</b>{{question.D}}<img ng-hide="!currDImg" ng-src="{{currDImg}}"></ion-checkbox>
+                       </div>
+                    </ion-list>
+                    <ion-list ng-if="question.type == 'single'">
+                      <div class="item-text-wrap">
+                        <ion-radio ng-model="question.userAns" ng-value="'A'"><b>1.</b>{{question.A}}<img ng-hide="!currAImg" ng-src="{{currAImg}}"></ion-radio>
+                        <ion-radio ng-model="question.userAns" ng-value="'B'"><b>2.</b>{{question.B}}<img ng-hide="!currBImg" ng-src="{{currBImg}}"></ion-radio>
+                        <ion-radio ng-model="question.userAns" ng-value="'C'"><b>3.</b>{{question.C}}<img ng-hide="!currCImg" ng-src="{{currDImg}}"></ion-radio>
+                        <ion-radio ng-model="question.userAns" ng-value="'D'"><b>4.</b>{{question.D}}<img ng-hide="!currDImg" ng-src="{{currDImg}}"></ion-radio>
+                      </div>
+                    </ion-list>
+                    <div class="list list-inset" ng-if="question.type == 'integer'">
+                      <label class="item item-input">
+                        <input type="text" placeholder="Integer" ng-model="question.userAns">
+                      </label>
+                    </div>
+
+            </div>
+        </div>
+        <div class="row" ng-if="!nextButton">
+          <div class="col-10"></div>
+
+            <a ng-click="showConfirm()" id="box_shadow" class="col-80 button button-full button-balanced myfont">
+             <strong>SUBMIT</strong>
+           </a>
+          <div class="col-10"></div>
+        </div>
+        <div class="row" ng-if="!question.review">
+          <div class="col-10"></div>
+
+            <a ng-click="reviewLater()" id="box_shadow" class="col-80 button button-full button-balanced myfont">
+             <strong>Mark For Review</strong>
+           </a>
+          <div class="col-10"></div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,58 @@
+<ion-view view-title="leaderboard">
+  <ion-tabs class="tabs-positive tabs-top tabs-striped">
+    <ion-tab title="Today">
+      <ion-content class="has-tabs-top">
+        <ion-list>
+          <ion-item ng-repeat="dayRank in dayRanks track by $index">
+            {{dayRank.username}}
+            {{dayRank.rank}}
+            {{dayRank.score}}
+          </ion-item>
+        </ion-list>
+        <button class="button button-assertive" ng-click="loadDay()">load more</button>
+        <!--<ion-infinite-scroll
+          ng-if="disableDayScroll"
+          on-infinite="loadDay()"
+          icon="ion-loading-c"
+          distance="1%">
+        </ion-infinite-scroll>-->
+      </ion-content>
+    </ion-tab>
+    <ion-tab title="7 Days">
+      <ion-content>
+        <ion-list>
+          <ion-item ng-repeat="weekRank in weekRanks">
+            {{weekRank.username}}
+            {{weekRank.rank}}
+            {{weekRank.score}}
+          </ion-item>
+        </ion-list>
+        <button class="button button-assertive" ng-click="loadWeek()">load more</button>
+        <!--<ion-infinite-scroll
+          ng-if="disableWeekScroll"
+          on-infinite="loadWeek()"
+          icon="ion-loading-c"
+          distance="1%">
+        </ion-infinite-scroll>-->
+      </ion-content>
+    </ion-tab>
+    <ion-tab title="30 Days">
+      <ion-content>
+        <ion-list>
+          <ion-item ng-repeat="monthRank in monthRanks">
+            {{monthRank.username}}
+            {{monthRank.rank}}
+            {{monthRank.score}}
+          </ion-item>
+        </ion-list>
+        <button class="button button-assertive" ng-click="loadMonth()">load more</button>
+        <!--<ion-infinite-scroll
+          ng-if="disableMonthScroll"
+          on-infinite="loadMonth()"
+          icon="ion-loading-c"
+          distance="1%">
+        </ion-infinite-scroll>-->
+      </ion-content>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

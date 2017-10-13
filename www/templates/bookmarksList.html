@@ -1,0 +1,19 @@
+<!--<ion-view view-title="Bookmarks">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-click="showQuestion(bookmark)" ng-repeat="bookmark in bookmarks">{{bookmark.question}}</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Questions" >
+    <ion-content  class="sub_topics grey">
+       <div class=" no-padding" >
+         <div class="row" ng-repeat="bookmark in bookmarks">
+           <item class="sub_topics_no lgrey">{{$index+1}}</item>
+           <a class="item item-text-wrap item-balanced sub_topics_item" ng-click="showQuestion(bookmark)">
+             {{bookmark.toShow}}
+          </a>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,105 @@
+<ion-view view-title="Profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="profile_lower">
+        <div class="hero slide-up" style="background-image: url('img/profile-back.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/1.jpg');"></div>
+                <h3><a class="light  myfont">{{user.name}}</a></h3>
+                <h4 class=" myfont">{{user.admnNo}}</h4>
+              </div>
+            </div>
+
+        <div class="tabs tabs-dark tabs-icon-top static  myfont">
+            <a href="#/app/leaderToday" class="tab-item">
+                <i class="icon ion-podium"></i> LeaderBoard
+            </a>
+            <a href="#/app/testlist" class="tab-item">
+                <i class="icon ion-trophy"></i> Competitions
+            </a>
+            <a href="#/app/qa" class="tab-item">
+                <i class="icon ion-clock"></i> Practice
+            </a>
+        </div>
+
+<div class="list">
+
+  <div class="item">
+    <div class="stats_header">
+      STATS
+    </div>
+  </div>
+  <li class="stats_container_space row"></li>
+  <li class="stats_container row">
+       <div class="col-10"></div>
+            <div class="col">
+              <div class="list animated infinite pulse">
+              <div class="stat_element orange">
+                  <p class="se1">Correct</p>
+                  <p class="se2">{{user.correct}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="list animated infinite pulse">
+              <div class="stat_element lyellow">
+                  <i class="se23 icon ion-flash"></i>
+                  <p class="se13">
+                    <b>{{user.pointsTotal}}</b>
+                  </p>
+
+             </div>
+          </div>
+        </div>
+
+            <div class="col">
+              <div class="list animated infinite pulse">
+                <div class="stat_element green">
+                    <p class="se1">Accuracy</p>
+                    <p class="se2"><b>{{user.accuracy}}</b>%</p>
+                 </div>
+            </div>
+          </div>
+      <div class="col-10"></div>
+    </li>
+<li class="stats_container_space row"></li>
+    <div class="item">
+              <div class="stats_header">
+              RANKS
+            </div>
+          </div>
+
+    <li class="stats_container_space row"></li>
+          <li class="stats_container row">
+                  <div class="col-10"></div>
+                      <div class="col">
+                        <div class="list animated infinite pulse">
+                        <div class="stat_element purple ">
+                            <p class="se1">Monthly</p>
+                            <p class="se2"><b>{{user.monthRank}}</b></p>
+                        </div>
+                      </div>
+                    </div>
+
+                      <div class="col">
+                       <div class="list animated infinite pulse">
+                        <div class="stat_element lblue">
+                            <p class="se1">Weekly</p>
+                            <p class="se2"><b>{{user.weekRank}}</b></p>
+                         </div>
+                       </div>
+                     </div>
+
+                      <div class="col">
+                        <div class="list animated infinite pulse">
+                        <div class="stat_element indigo">
+                              <p class="se1">Today<p>
+                            <p class="se2"><b>{{user.todayRank}}</b></p>
+                        </div>
+                      </div>
+                    </div>
+             <div class="col-10"></div>
+    </li>
+    <li class="stats_container_space row"></li>
+    </div>
+    </ion-content>
+</ion-view>

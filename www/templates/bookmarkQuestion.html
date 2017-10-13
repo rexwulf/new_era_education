@@ -1,0 +1,31 @@
+<ion-view view-title="Question">
+    <ion-content class="grey" >
+
+        <div class="item card-item">
+            <div  id="box_shadow" class="card stable-bg ink ink-dark">
+                <div class="item item-text-wrap">
+                    <!--<span><strong>1.</strong></span>-->
+                    <strong id="jax"></strong>
+                    <a class="image" ng-click="openImg(question.questionImage)" ng-if="question.questionImage"><img ng-src="{{currQImg}}">
+                    </a>
+
+                    <!--<div class="card-footer text-right">
+
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i>3:00 min
+                        </div>
+                    </div>-->
+                  </div>
+                    <ion-list>
+                       <div class="item-text-wrap">
+                          <ion-radio><b>1.</b>{{question.A}}<img ng-hide="!currAImg" ng-src="{{currAImg}}"></ion-radio>
+                          <ion-radio><b>2.</b>{{question.B}}<img ng-hide="!currBImg" ng-src="{{currBImg}}"></ion-radio>
+                          <ion-radio><b>3.</b>{{question.C}}<img ng-hide="!currCImg" ng-src="{{currCImg}}"></ion-radio>
+                          <ion-radio><b>4.</b>{{question.D}}<img ng-hide="!currDImg" ng-src="{{currDImg}}"></ion-radio>
+                       </div>
+                    </ion-list>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

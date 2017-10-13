@@ -1,0 +1,64 @@
+<!--<ion-view view-title="gameEnd">
+  <ion-content>
+    End GAME!
+    <div ng-repeat="question in questions track by $index">
+      {{question || json}}
+    </div>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Question">
+    <ion-content  class="grey myfont">
+<div class="list">
+  <div class="list animated rubberBand infinite">
+     <li class="row ">
+       <div class="col col-20"></div>
+       <div class="col col-60">
+         <div class="item item-assertive item-text-wrap ques_text">
+        <h1 class="testEndFont">  Total wrong -> <strong>{{wrong}}</strong> </h1>
+        </div>
+      </div>
+      <div class="col col-20"></div>
+    </li>
+  </div>
+
+
+ <div class="list animated zoomInUp">
+     <li class="row ">
+       <div class="col col-20"></div>
+       <div class="col col-60">
+         <div class="item item-balanced item-text-wrap ques_text">
+          <h1 class="testEndFont">  Total correct -> <strong>{{correct}}</strong> </h1>
+          </div>
+       </div>
+     <div class="col col-20"></div>
+    </li>
+</div>
+
+
+ <div class="list animated rubberBand">
+   <li class="row ">
+     <div class="col col-20"></div>
+     <div class="col col-60">
+       <div  class="item item-positive item-text-wrap ques_text">
+      <h1 class="testEndFont">  Points -> <strong>{{points}}</strong></h1>
+      </div>
+    </div>
+    <div class="col col-20"></div>
+  </li>
+ </div>
+
+ <div class="list animated infinite swing">
+  <li class="row ">
+    <div class="col col-20"></div>
+    <div class="col col-60">
+      <div  class="item item-energized item-text-wrap ques_text">
+       <h1 class="testEndFont">KEEP WORKING HARD !</h1>
+     </div>
+   </div>
+   <div class="col col-20"></div>
+  </li>
+ </div>
+</div>
+
+ </ion-content>
+</ion-view>

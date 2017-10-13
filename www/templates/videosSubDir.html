@@ -1,0 +1,60 @@
+<!--<ion-view view-title="VideosSubDir">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="video in videos track by $index">
+        {{video.title}}
+        <h3 class="royal">{{video.description}}</h3>
+        <button ng-if="video.open" class="button button-positive button-small" ng-click="video.open()">open</button>
+        <button ng-if="video.download" class="button button-positive button-small" ng-click="video.download()">download</button>
+        <button ng-if="video.delete" class="button button-positive button-small" ng-click="video.delete()">delete video</button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Tutorials available" >
+    <ion-content  class="sub_topics grey">
+  <div class="container" ng-repeat="video in videos track by $index">
+     <div class="row">
+       <a class="item item-text-wrap item-positive sub_topics_item " id="box_shadow">
+         <i class="sub_topics_no  ion-social-youtube-outline " style="font-size:1.1em;"></i>
+         <strong>{{video.title}}</strong>
+      </a>
+    </div>
+    <div class="container">
+    <div class="row" ng-hide="!video.description">
+
+        <i class="sub_topics_no  ion-ios-information-outline" style="font-size:1.3em;"></i>
+        <a class="item item-text-wrap item-dark sub_topics_item_3 " id="box_shadow">
+        <div class="desc">{{video.description}}
+      </div>
+     </a>
+   </div>
+
+     <div class="row video_list">
+     <div class="col"></div>
+       <button class="item item-image item-positive noBorder" ng-click="video.open()" ng-if="video.open">
+        <i class="icon-right ion-play"></i>
+       </button>
+       <button class="item item-image item-assertive noBorder" ng-click="video.delete()" ng-if="video.delete">
+         <i class="icon-right ion-android-delete "></i>
+       </button>
+       <a class="item item-image item-balanced " ng-click="video.download($index)" ng-if="video.download">
+         Download
+         <i class="icon-right ion-ios-download-outline "></i>
+       </a>
+
+
+
+     </div>
+     <div class="row" ng-if="video.downloading">
+           <div class="col col-20"></div>
+           <div class="col col-60">
+             <ion-spinner  icon="android"></ion-spinner>
+           </div>
+          <div class="col col-20"></div>
+     </div>
+
+  </div>
+</div>
+    </ion-content>
+</ion-view>

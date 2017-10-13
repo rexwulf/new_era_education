@@ -1,0 +1,52 @@
+<ion-view view-title="Update">
+  <ion-content class="grey">
+    <div>
+      <div class="row" ng-if="loading">
+            <div class="col col-20"></div>
+            <div class="col col-60">
+              <ion-spinner  icon="spiral"></ion-spinner>
+            </div>
+           <div class="col col-20"></div>
+      </div>
+      <div class="row ">
+              <div class="col col-20"></div>
+              <div class="col col-60">
+                <a id="box_shadow_update" class="item item-balanced" ng-click="checkQuestionUpdates()">
+                  Update Questions
+                </a>
+             </div>
+             <div class="col col-20"></div>
+      </div>
+      <div class="row ">
+              <div class="col col-20"></div>
+              <div class="col col-60">
+                <a id="box_shadow_update" class="item item-balanced" ng-click="checkVideoUpdates()">
+                  Update Videos
+                </a>
+             </div>
+             <div class="col col-20"></div>
+      </div>
+      <div class="row ">
+              <div class="col col-20"></div>
+              <div class="col col-60">
+                <a id="box_shadow_update" class="item item-balanced" ng-click="checkDppUpdates()">
+                  Update Dpps
+                </a>
+             </div>
+             <div class="col col-20"></div>
+      </div>
+      <div class="row ">
+              <div class="col col-20"></div>
+              <div class="col col-60">
+                <a id="box_shadow_update" class="item item-energized" ng-click="uploadToServer()">
+                  Upload Scores
+                </a>
+             </div>
+             <div class="col col-20"></div>
+      </div>
+      <!--<button class="button button-positive" ng-click="checkQuestionUpdates()">Update</button>
+      <button class="button button-positive" ng-click="checkVideoUpdates()">Update</button>
+      <button class="button button-positive" ng-click="checkDppUpdates()">Update</button>
+    {{res}}-->
+  </ion-content>
+</ion-view>

@@ -1,0 +1,101 @@
+{
+  "time": 900000,
+  "name": "Jee Adv mock",
+  "password": "nakulh",
+  "subjects": ["maths", "physics", "chemistry"],
+  "date": "january 2016",
+  "maths": [
+    {
+      "question": "m1 a",
+      "type": "single",
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
+      "answer": "a",
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 4,
+      "negativeMarks": -1
+    },
+    {
+      "question": "m2 a,b",
+      "type": "multiple",
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
+      "answer": ["a", "b"],
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 2,
+      "negativeMarks": -1
+    }
+  ],
+  "physics": [
+    {
+      "question": "p1 4",
+      "type": "integer",
+      "answer": 4,
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 4,
+      "negativeMarks": -2
+    },
+    {
+      "question": "p2 a,c",
+      "type": "multiple",
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
+      "answer": ["a", "c"],
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 6,
+      "negativeMarks": -3
+    }
+  ],
+  "chemistry": [
+    {
+      "question": "c1 0",
+      "type": "integer",
+      "answer": 0,
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 4,
+      "negativeMarks": -1
+    },
+    {
+      "question": "c2 a",
+      "type": "single",
+      "a": "a",
+      "b": "b",
+      "c": "c",
+      "d": "d",
+      "answer": "a",
+      "questionImage": null,
+      "aImg": null,
+      "bimg": null,
+      "cImg": null,
+      "dImg": null,
+      "marks": 8,
+      "negativeMarks": 0
+    }
+  ]
+}

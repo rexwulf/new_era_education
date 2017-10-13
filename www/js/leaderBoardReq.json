@@ -1,0 +1,45 @@
+{
+  "admnNo": "2342rf",
+  "todayScore": 56,
+  "weekScore": 342,
+  "monthScore": 900
+}
+{
+  "todayRank": 67,
+  "weekRank": 45,
+  "monthRank": 123
+}
+
+
+
+{
+  "days": 7,
+  "range": 1-5
+}
+[
+  {
+    "usermame": "username",
+    "score": 567,
+    "rank": 1
+  },
+  {
+    "usermame": "username",
+    "score": 467,
+    "rank": 2
+  },
+  {
+    "usermame": "username",
+    "score": 367,
+    "rank": 3
+  },
+  {
+    "usermame": "username",
+    "score": 267,
+    "rank": 4
+  },
+  {
+    "usermame": "username",
+    "score": 167,
+    "rank": 5
+  }
+]

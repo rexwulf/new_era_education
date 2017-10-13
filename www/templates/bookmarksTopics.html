@@ -1,0 +1,19 @@
+<!--<ion-view view-title="Bookmarks">
+  <ion-content>
+    <ion-list>
+      <ion-item href="#/app/bookmarks/{{subject}}/{{topic}}" ng-repeat="topic in topics">{{topic}}</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Topic" >
+    <ion-content  class="sub_topics grey">
+       <div class=" no-padding" >
+         <div class="row" ng-repeat="topic in topics track by $index">
+           <item class="sub_topics_no lgrey">{{$index+1}}</item>
+           <a class="item item-text-wrap item-positive sub_topics_item"  ng-href="#/app/bookmarks/{{subject}}/{{topic}}">
+             {{topicNames[$index]}}
+          </a>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>

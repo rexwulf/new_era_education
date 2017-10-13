@@ -1,0 +1,21 @@
+<ion-view view-title="Settings">
+  <ion-content scroll="false">
+    <div>
+      <ion-radio ng-model="choice" ng-value="true">Vgpt Intranet<br></ion-radio>
+      <ion-radio ng-model="choice" ng-value="false">Internet</ion-radio>
+    <button class="item item-balanced" ng-click="saveSettings(choice)">Submit</button>
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="password" ng-model="password">
+      </label>
+      <button class="item item-positive item-text-wrap" ng-click="enterPermanentSettings(password)">
+        Submit
+      </button>
+
+    </div>
+  </div>
+</ion-view>

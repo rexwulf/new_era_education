@@ -1,0 +1,21 @@
+<!--<ion-view view-title="VideosDir">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-href="#/app/videos/{{subject}}/{{topicLinks[$index]}}/" ng-repeat="topic in topics track by $index">
+        {{topic}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>-->
+<ion-view view-title="Tutorial's Topic" >
+    <ion-content  class="sub_topics grey">
+       <div class=" no-padding" >
+         <div class="row" ng-repeat="topic in topics track by $index">
+           <item class="sub_topics_no lgrey">{{$index+1}}</item>
+           <a class="item item-text-wrap item-positive sub_topics_item" style="font-size:1em;" ng-href="#/app/videos/{{subject}}/{{topic}}/">
+             {{topicNames[$index]}}
+          </a>
+        </div>
+      </div>
+    </ion-content>
+</ion-view>
